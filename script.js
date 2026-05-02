@@ -1,4 +1,3 @@
-//   <!-- ================= ADVANCED JS (script.js) ================= -->
 const container = document.getElementById("animals");
 const aboutSection = document.getElementById("about");
 
@@ -9,7 +8,8 @@ fetch('http://localhost:3000/animals')
   .then(data => {
     allAnimals = data;
     displayAnimals(allAnimals);
-  });
+  })
+  .catch(err => console.log(err));
 
 function displayAnimals(data) {
   container.innerHTML = "";
@@ -20,10 +20,15 @@ function displayAnimals(data) {
     card.className = "card";
 
     card.innerHTML = `
-      <img src="${a.img}" />
+      <img src="${a.img}" alt="${a.name}" />
       <h3>${a.name}</h3>
       <p>${a.info}</p>
     `;
+
+    // 🔥 DETAIL PAGE CLICK (NEW)
+    card.onclick = () => {
+      window.location.href = `detail.html?id=${a.id}`;
+    };
 
     container.appendChild(card);
   });
@@ -38,9 +43,20 @@ function filterAnimals(type) {
   }
 }
 
+function searchAnimals() {
+  const value = document.getElementById("searchInput").value.toLowerCase();
+
+  const filtered = allAnimals.filter(a =>
+    a.name.toLowerCase().includes(value)
+  );
+
+  displayAnimals(filtered);
+}
+
 function showAbout() {
   container.innerHTML = "";
   aboutSection.classList.remove("hidden");
 }
-
-
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
+}

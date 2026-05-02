@@ -12,7 +12,7 @@ let animals = [
   {
     id: 1,
     name: "Lion",
-    info: "King of Jungle",
+    info: "King of the jungle",
     img: "https://images.stockcake.com/public/d/d/6/dd6c09ba-ea53-47ab-adf0-aaab6bb4e6db_large/majestic-lion-sunset-stockcake.jpg",
     type: "land"
   },
@@ -41,7 +41,7 @@ let animals = [
     id: 5,
     name: "Dolphin",
     info: "Intelligent marine animal",
-    img: "dolphin.webp",
+    img: "dolphin.jpg",
     type: "water"
   },
   {

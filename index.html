@@ -1,10 +1,8 @@
-<!-- ================= ADVANCED FRONTEND (index.html) ================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WildLife Explorer Pro</title>
+  <title>WildLife Explorer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,16 +11,44 @@
   <h1>🌿 WildLife Explorer</h1>
   <nav>
     <button onclick="filterAnimals('all')">Home</button>
-    <button onclick="filterAnimals('land')">Land Animals</button>
-    <button onclick="filterAnimals('water')">Water Animals</button>
+    <button onclick="filterAnimals('land')">Land</button>
+    <button onclick="filterAnimals('water')">Water</button>
     <button onclick="filterAnimals('birds')">Birds</button>
     <button onclick="showAbout()">About</button>
+    <button onclick="toggleDarkMode()">🌙</button>
   </nav>
 </header>
 
-<section id="about" class="hidden">
-  <h2>About Project</h2>
-  <p>This is an advanced wildlife website showing categorized animals with images and details.</p>
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search animals..." onkeyup="searchAnimals()">
+</div>
+
+<section id="about" class="about-section hidden">
+  <h2>🌿 About Jungle Animals</h2>
+
+  <div class="about-cards">
+    
+    <div class="about-card">
+      <h3>🌳 Natural Habitat</h3>
+      <p>Jungle animals live in forests, grasslands, and natural environments.</p>
+    </div>
+
+    <div class="about-card">
+      <h3>⚖️ Ecosystem Balance</h3>
+      <p>They play a key role in maintaining ecological balance in nature.</p>
+    </div>
+
+    <div class="about-card">
+      <h3>🐾 Types of Animals</h3>
+      <p>Includes carnivores, herbivores, and omnivores with diverse behaviors.</p>
+    </div>
+
+    <div class="about-card">
+      <h3>🌍 Conservation</h3>
+      <p>Protecting wildlife is essential to preserve biodiversity and nature.</p>
+    </div>
+
+  </div>
 </section>
 
 <section id="animals" class="grid"></section>
@@ -30,6 +56,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
