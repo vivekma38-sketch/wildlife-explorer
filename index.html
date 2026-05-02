@@ -1,0 +1,35 @@
+<!-- ================= ADVANCED FRONTEND (index.html) ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WildLife Explorer Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🌿 WildLife Explorer</h1>
+  <nav>
+    <button onclick="filterAnimals('all')">Home</button>
+    <button onclick="filterAnimals('land')">Land Animals</button>
+    <button onclick="filterAnimals('water')">Water Animals</button>
+    <button onclick="filterAnimals('birds')">Birds</button>
+    <button onclick="showAbout()">About</button>
+  </nav>
+</header>
+
+<section id="about" class="hidden">
+  <h2>About Project</h2>
+  <p>This is an advanced wildlife website showing categorized animals with images and details.</p>
+</section>
+
+<section id="animals" class="grid"></section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
