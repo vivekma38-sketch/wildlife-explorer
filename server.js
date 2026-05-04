@@ -41,21 +41,21 @@ let animals = [
     id: 5,
     name: "Dolphin",
     info: "Intelligent marine animal",
-    img: "dolphin.jpg",
+    img: "images/dolphin.jpg",
     type: "water"
   },
   {
     id: 6,
     name: "Eagle",
     info: "Powerful bird",
-    img: "eagle.webp",
+    img: "images/eagle.webp",
     type: "birds"
   },
   {
     id: 7,
     name: "Parrot",
     info: "Colorful bird",
-    img: "parrot.jpg",
+    img: "images/parrot.jpg",
     type: "birds"
   }
 ];
